@@ -17,5 +17,10 @@
 #     artifact-name: corne_left_with_logging
 #
 ---
-null
-...
+include:
+  - board: nice_nano_v2
+    shield: ptero_dactyl_left
+  - board: nice_nano_v2
+    shield: ptero_dactyl_right
+  - board: nice_nano_v2
+    shield: settings_reset
