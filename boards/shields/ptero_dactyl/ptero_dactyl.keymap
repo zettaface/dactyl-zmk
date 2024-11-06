@@ -17,7 +17,7 @@
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <135>;
+            tapping_term_ms = <145>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -39,11 +39,11 @@
 //                               | MO lay 1| SPACE   |   HOME  |                   | ENTER   | MO lay 2|    -    |
 
             bindings = <
-&kp ESC    &kp Q      &kp W     &kp E      &kp R      &kp T                           &kp Y      &kp U      &kp I      &kp O      &kp P          &kp LBKT
-&kp TAB    &kp A      &kp S     &kp D      &kp F      &kp G                           &kp H      &kp J      &kp K      &kp L      &kp SEMI       &kp SQT
-&kp LCTRL  &kp Z      &kp X     &kp C      &kp V      &kp B                           &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH       &kp RBKT
-                      &kp LGUI  &kp LALT   &kp SPACE  &kp LSHIFT                      &kp LOWER  &mo DEL    &kp LALT   &tog AUTOSHIFTED
-                                &mo LNAVL  &kp LALT   &lt LNAVL BSPC                  &lt SYMBL ENTER  &mo NUML  &mo FUNCL
+&kp ESC    &kp Q      &kp W     &kp E      &kp R            &kp T                           &kp Y            &kp U      &kp I      &kp O      &kp P          &kp LBKT
+&kp TAB    &kp A      &kp S     &kp D      &kp F            &kp G                           &kp H            &kp J      &kp K      &kp L      &kp SEMI       &kp SQT
+&kp LCTRL  &kp Z      &kp X     &kp C      &kp V            &kp B                           &kp N            &kp M      &kp COMMA  &kp DOT    &kp FSLH       &kp RBKT
+                      &kp LGUI  &kp LALT   &lt LNAVL SPACE  &kp LSHIFT                      &lt NUML ENTER   &kp DEL    &kp LALT   &tog AUTOSHIFTED
+                                &kp LSHIFT &kp LALT         &lt LNAVL BSPC                  &lt SYMBL ENTER  &mo NUML   &mo FUNCL
             >;
         };
 
@@ -73,7 +73,7 @@
 &trans    &trans    &trans    &trans     &trans     &trans                           &trans      &trans      &trans      &trans      &trans      &trans
 &trans    &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans                           &trans      &trans      &trans      &trans      &trans      &trans
 &trans    &kp HOME  &kp PG_DN &kp PG_UP  &kp END    &trans                           &trans      &trans      &trans      &trans      &trans      &trans
-                    &trans    &trans     &trans     &trans                           &trans      &trans      &trans       &trans
+                    &trans    &trans     &trans     &trans                           &trans      &trans      &trans      &trans
                               &trans     &trans     &trans                           &trans      &trans      &trans
             >;
         };
@@ -84,8 +84,8 @@
 &trans    &trans    &kp N7      &kp N8        &kp N9       &trans                           &trans      &trans      &trans      &trans      &trans      &trans
 &trans    &trans    &kp N4      &kp N5        &kp N6       &kp EQUAL                        &trans      &trans      &trans      &trans      &trans      &trans
 &trans    &trans    &kp N1      &kp N2        &kp N3       &kp BACKSLASH                    &trans      &trans      &trans      &trans      &trans      &trans
-                    &kp LANG1   &kp LANG2     &kp N0       &kp KP_DOT                       &trans      &trans      &trans       &trans
-                                &kp KP_MINUS  &kp KP_LPAR  &kp KP_RPAR                      &trans      &trans      &trans
+                    &kp LANG1   &kp LANG2     &kp N0       &kp DOT                          &trans      &trans      &trans      &trans
+                                &kp MINUS     &kp LPAR     &kp RPAR                         &trans      &trans      &trans
             >;
         };
 
