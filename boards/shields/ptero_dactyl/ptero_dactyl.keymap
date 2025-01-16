@@ -72,7 +72,7 @@
         lnavl {
             display-name = "nav";
             bindings = <
-&trans    &trans    &trans    &trans     &trans     &trans                           &trans      &trans      &trans      &trans      &trans      &trans
+&bootloader  &trans    &trans    &trans     &trans     &trans                           &trans      &trans      &trans      &trans      &trans      &trans
 &trans    &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans                           &trans      &trans      &trans      &trans      &trans      &trans
 &trans    &kp HOME  &kp PG_DN &kp PG_UP  &kp END    &trans                           &trans      &trans      &trans      &trans      &trans      &trans
                     &trans    &trans                                                                         &trans      &trans 
@@ -96,7 +96,7 @@
         symbl {
             display-name = "sym";
             bindings = <
-&trans    &trans    &kp AMPS   &kp ASTRK    &kp LPAR    &trans                          &trans      &trans      &trans      &trans      &trans      &trans
+&trans    &trans    &kp AMPS   &kp ASTRK    &kp LPAR    &trans                          &trans      &trans      &trans      &trans      &trans      &bootloader
 &trans    &kp COLON &kp DLLR   &kp PRCNT    &kp CARET   &kp PLUS                        &trans      &trans      &trans      &trans      &trans      &trans
 &trans    &trans    &kp EXCL   &kp AT       &kp POUND   &kp PIPE                        &trans      &trans      &trans      &trans      &trans      &trans
                     &trans     &trans                                                                           &trans      &trans
