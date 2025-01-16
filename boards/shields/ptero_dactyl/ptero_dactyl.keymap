@@ -42,8 +42,8 @@
 &kp ESC    &kp Q      &kp W     &kp E      &kp R            &kp T                           &kp Y            &kp U      &kp I      &kp O      &kp P          &kp LBKT
 &kp TAB    &kp A      &kp S     &kp D      &kp F            &kp G                           &kp H            &kp J      &kp K      &kp L      &kp SEMI       &kp SQT
 &kp LCTRL  &kp Z      &kp X     &kp C      &kp V            &kp B                           &kp N            &kp M      &kp COMMA  &kp DOT    &kp FSLH       &kp RBKT
-                      &kp LGUI  &kp LALT   &lt LNAVL SPACE  &kp LSHIFT                      &lt NUML ENTER   &kp DEL    &kp LALT   &tog AUTOSHIFTED
-                                &kp LSHIFT &kp LALT         &lt LNAVL BSPC                  &lt SYMBL ENTER  &mo NUML   &mo FUNCL
+                      &kp LGUI  &kp LALT   &lt LNAVL SPACE  &mo LNAVL                       &lt NUML ENTER   &kp ENTER  &kp LALT   &tog AUTOSHIFTED
+                                &kp LSHIFT &kp LALT         &lt LNAVL BSPC                  &lt SYMBL DEL  &mo NUML   &mo FUNCL
             >;
         };
 
@@ -95,8 +95,8 @@
 &trans    &trans    &kp AMPS   &kp ASTRK  &kp LPAR    &trans                      &trans      &trans      &trans      &trans      &trans      &trans
 &trans    &kp COLON &kp DLLR   &kp PRCNT  &kp CARET   &kp PLUS                    &trans      &trans      &trans      &trans      &trans      &trans
 &trans    &trans    &kp EXCL   &kp AT     &kp POUND   &kp PIPE                    &trans      &trans      &trans      &trans      &trans      &trans
-                    &trans     &trans     &kp LPAR    &kp RPAR                    &trans      &trans      &trans      &trans
-                               &kp LBKT   &kp RBKT    &trans                      &trans      &trans      &trans
+                    &trans     &trans     &kp LBKT    &kp RBKT                    &trans      &trans      &trans      &trans
+                               &kp UNDERSCORE    &kp LPAR    &kp RPAR                       &trans      &trans      &trans
             >;
         };
 
@@ -118,7 +118,7 @@
 // |   tab   |    q    |    w    |    e    |    r    |    t    |                   |    y    |    u    |    i    |    o    |    p    |    \    |
 // |  lalt   |    a    |    s    |    d    |    f    |    g    |                   |    h    |    j    |    k    |    l    |    ;    |    '    |
 // |  lctrl  |    z    |    x    |    c    |    v    |    b    |                   |    n    |    m    |    ,    |    .    |    /    |  ralt   |
-//                     |    [    |    ]    |                                                           |    -    |    =    |
+//                     |    [    |    ]    |                                                           |    -   |    =    |
 //                               | mo lay 1| space   |                   | enter   | mo lay 2|
 //                                         |   tab   |   home  |   end   |   del   |
 //                                         |  raise  |    ~    |   gui   |  lower  |
