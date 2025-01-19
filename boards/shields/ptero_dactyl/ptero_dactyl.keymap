@@ -59,7 +59,7 @@
 &kp N2     &kp LSHIFT &kp A      &kp S     &kp D      &kp F                                 &kp H            &kp J      &kp K      &kp L      &kp SEMI       &kp SQT
 &kp N3     &kp LCTRL  &kp Z      &kp X     &kp C      &kp V                                 &kp N            &kp M      &kp COMMA  &kp DOT    &kp FSLH       &kp RBKT
                       &kp M      &kp TAB                                                                                &trans     &trans
-                                &kp LSHIFT &kp SPACE  &mo LNAVL                             &lt SYMBL ENTER  &lt NUML ENTER  &mo FUNCL
+                                 &kp B     &kp SPACE  &mo LNAVL                             &lt SYMBL ENTER  &lt NUML ENTER  &mo FUNCL
                                            &kp LCTRL  &mo NUML                              &kp DEL          &mo NUML
             >;
         };
