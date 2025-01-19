@@ -6,11 +6,12 @@
 
 #define DEFAULT 0
 #define AUTOSHIFTED 1
-#define LNAVL   2
-#define NUML    3
-#define SYMBL   4
-#define FUNCL   5
-#define LOWER   6
+#define GAME    2
+#define LNAVL   3
+#define NUML    4
+#define SYMBL   5
+#define FUNCL   6
+#define LOWER   7
 
 / {
     behaviors {
@@ -29,36 +30,18 @@
 
         default_layer {
             display-name = "def";
-// Commented layout is not actual layout.
-// -------------------------------------------------------------------------------------------------------------------------
-// |   ESC   |    1    |    2    |    3    |    4    |    5    |                   |    6    |    7    |    8    |    9    |    0    |  BSPC   |
-// |   TAB   |    Q    |    W    |    E    |    R    |    T    |                   |    Y    |    U    |    I    |    O    |    P    |    \    |
-// |  LALT   |    A    |    S    |    D    |    F    |    G    |                   |    H    |    J    |    K    |    L    |    ;    |    '    |
-// |  LCTRL  |    Z    |    X    |    C    |    V    |    B    |                   |    N    |    M    |    ,    |    .    |    /    |  RALT   |
-//                     |    [    |    ]    | MO lay 1| SPACE   |                   |    -    |    -    |    -    |    =    |
-//                               | MO lay 1| SPACE   |   HOME  |                   | ENTER   | MO lay 2|    -    |
-
             bindings = <
 &kp ESC    &kp Q      &kp W     &kp E      &kp R            &kp T                           &kp Y            &kp U      &kp I      &kp O      &kp P          &kp LBKT
 &kp TAB    &kp A      &kp S     &kp D      &kp F            &kp G                           &kp H            &kp J      &kp K      &kp L      &kp SEMI       &kp SQT
 &kp LCTRL  &kp Z      &kp X     &kp C      &kp V            &kp B                           &kp N            &kp M      &kp COMMA  &kp DOT    &kp FSLH       &kp RBKT
-                      &kp LGUI  &kp LALT                                                                                &kp LALT   &tog AUTOSHIFTED
-                                &kp LSHIFT &lt LNAVL SPACE  &mo LNAVL                       &lt NUML ENTER   &kp ENTER  &mo FUNCL
-                                           &kp LALT         &lt LNAVL BSPC                  &lt SYMBL DEL    &mo NUML
+                      &kp LGUI  &kp LALT                                                                                &tog GAME  &tog AUTOSHIFTED
+                                &kp LSHIFT &lt LNAVL SPACE  &mo LNAVL                       &lt SYMBL ENTER  &lt NUML ENTER  &mo FUNCL
+                                           &kp LALT         &kp BSPC                        &kp DEL          &mo SYMBL
             >;
         };
 
         as_layer {
             display-name = "sdef";
-// Commented layout is not actual layout.
-// -------------------------------------------------------------------------------------------------------------------------
-// |   ESC   |    1    |    2    |    3    |    4    |    5    |                   |    6    |    7    |    8    |    9    |    0    |  BSPC   |
-// |   TAB   |    Q    |    W    |    E    |    R    |    T    |                   |    Y    |    U    |    I    |    O    |    P    |    \    |
-// |  LALT   |    A    |    S    |    D    |    F    |    G    |                   |    H    |    J    |    K    |    L    |    ;    |    '    |
-// |  LCTRL  |    Z    |    X    |    C    |    V    |    B    |                   |    N    |    M    |    ,    |    .    |    /    |  RALT   |
-//                     |    [    |    ]    | MO lay 1| SPACE   |                   |    -    |    -    |    -    |    =    |
-//                               | MO lay 1| SPACE   |   HOME  |                   | ENTER   | MO lay 2|    -    |
-
             bindings = <
 &trans    AS(Q)      AS(W)     AS(E)      AS(R)      AS(T)                           AS(Y)      AS(U)      AS(I)      AS(O)      AS(P)          AS(LBKT)
 &trans    AS(A)      AS(S)     AS(D)      AS(F)      AS(G)                           AS(H)      AS(J)      AS(K)      AS(L)      AS(SEMI)       AS(SQT)
@@ -69,22 +52,34 @@
             >;
         };
 
+        game_layer {
+            display-name = "game";
+            bindings = <
+&kp N1     &kp ESC    &kp Q      &kp W     &kp E      &kp R                                 &kp Y            &kp U      &kp I      &kp O      &kp P          &kp LBKT
+&kp N2     &kp LSHIFT &kp A      &kp S     &kp D      &kp F                                 &kp H            &kp J      &kp K      &kp L      &kp SEMI       &kp SQT
+&kp N3     &kp LCTRL  &kp Z      &kp X     &kp C      &kp V                                 &kp N            &kp M      &kp COMMA  &kp DOT    &kp FSLH       &kp RBKT
+                      &kp M      &kp TAB                                                                                &trans     &trans
+                                &kp LSHIFT &kp SPACE  &mo LNAVL                             &lt SYMBL ENTER  &lt NUML ENTER  &mo FUNCL
+                                           &kp LCTRL  &mo NUML                              &kp DEL          &mo NUML
+            >;
+        };
+
         lnavl {
             display-name = "nav";
             bindings = <
 &bootloader  &trans    &trans    &trans     &trans     &trans                           &trans      &trans      &trans      &trans      &trans      &trans
-&trans    &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans                           &trans      &trans      &trans      &trans      &trans      &trans
-&trans    &kp HOME  &kp PG_DN &kp PG_UP  &kp END    &trans                           &trans      &trans      &trans      &trans      &trans      &trans
-                    &trans    &trans                                                                         &trans      &trans 
-                              &trans     &trans     &trans                           &trans      &trans      &trans
-                                         &trans     &trans                           &trans      &trans
+&trans       &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans                           &trans      &trans      &trans      &trans      &trans      &trans
+&trans       &kp HOME  &kp PG_DN &kp PG_UP  &kp END    &trans                           &trans      &trans      &trans      &trans      &trans      &trans
+                       &trans    &trans                                                                         &trans      &trans 
+                                 &trans     &trans     &trans                           &trans      &trans      &trans
+                                            &trans     &trans                           &trans      &trans
             >;
         };
 
         numl {
             display-name = "num";
             bindings = <
-&trans    &trans    &kp N7      &kp N8        &kp N9       &trans                           &trans      &trans      &trans      &trans      &trans      &trans
+&trans    &kp LBKT  &kp N7      &kp N8        &kp N9       &kp RBKT                           &trans      &trans      &trans      &trans      &trans      &trans
 &trans    &trans    &kp N4      &kp N5        &kp N6       &kp EQUAL                        &trans      &trans      &trans      &trans      &trans      &trans
 &trans    &trans    &kp N1      &kp N2        &kp N3       &kp BACKSLASH                    &trans      &trans      &trans      &trans      &trans      &trans
                     &kp LANG1   &kp LANG2                                                                           &trans      &trans
@@ -96,11 +91,11 @@
         symbl {
             display-name = "sym";
             bindings = <
-&trans    &trans    &kp AMPS   &kp ASTRK    &kp LPAR    &trans                          &trans      &trans      &trans      &trans      &trans      &bootloader
+&trans    &kp LBRC  &kp AMPS   &kp ASTRK    &kp LPAR    &kp RBRC                        &trans      &trans      &trans      &trans      &trans      &bootloader
 &trans    &kp COLON &kp DLLR   &kp PRCNT    &kp CARET   &kp PLUS                        &trans      &trans      &trans      &trans      &trans      &trans
 &trans    &trans    &kp EXCL   &kp AT       &kp POUND   &kp PIPE                        &trans      &trans      &trans      &trans      &trans      &trans
                     &trans     &trans                                                                           &trans      &trans
-                               &kp UNDERSCORE &kp LBKT  &kp RBKT                       &trans      &trans      &trans 
+                               &kp UNDERSCORE &kp LBKT  &kp RBKT                        &trans      &trans      &trans 
                                               &kp LPAR  &kp RPAR                        &trans      &trans
             >;
         };
