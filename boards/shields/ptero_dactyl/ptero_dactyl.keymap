@@ -23,6 +23,23 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        pht: positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <1>;    // <---[[the W key]]
+        };
+
+        tnl: tap_dance_num_layer {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo NUML>, <&kt KP_NUMLOCK>;
+        };
     };
 
     keymap {
@@ -31,9 +48,9 @@
         default_layer {
             display-name = "def";
             bindings = <
-&kp ESC    &kp Q      &kp W     &kp E      &kp R            &kp T                           &kp Y            &kp U      &kp I      &kp O      &kp P          &kp LBKT
-&kp TAB    &kp A      &kp S     &kp D      &kp F            &kp G                           &kp H            &kp J      &kp K      &kp L      &kp SEMI       &kp SQT
-&kp LCTRL  &kp Z      &kp X     &kp C      &kp V            &kp B                           &kp N            &kp M      &kp COMMA  &kp DOT    &kp FSLH       &kp RBKT
+&kp ESC    &kp Q      &kp W     &kp E                &kp R            &kp T                           &kp Y            &kp U      &kp I      &kp O      &kp P          &kp LBKT
+&kp TAB    &kp A      &kp S     &kp D                &kp F            &kp G                           &kp H            &kp J      &kp K      &kp L      &kp SEMI       &kp SQT
+&kp LCTRL  &kp Z      &kp X     &kp C                &kp V            &kp B                           &kp N            &kp M      &kp COMMA  &kp DOT    &kp FSLH       &kp RBKT
                       &kp LGUI  &kp LALT                                                                                &tog GAME  &tog AUTOSHIFTED
                                 &kp LSHIFT &lt LNAVL SPACE  &mo LNAVL                       &lt SYMBL ENTER  &lt NUML ENTER  &mo FUNCL
                                            &kp LALT         &kp BSPC                        &kp DEL          &mo SYMBL
@@ -84,7 +101,7 @@
 &trans    &trans    &kp N1      &kp N2        &kp N3       &kp BACKSLASH                    &trans      &trans      &trans      &trans      &trans      &trans
                     &kp LANG1   &kp LANG2                                                                           &trans      &trans
                                 &kp MINUS     &kp N0       &kp DOT                          &trans      &trans      &trans
-                                              &kp LPAR     &kp RPAR                         &trans      &trans
+                                              &kp X        &kp RPAR                         &trans      &trans
             >;
         };
 
