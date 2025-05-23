@@ -13,4 +13,14 @@ if SHIELD_PTERO_DACTYL_LEFT || SHIELD_PTERO_DACTYL_RIGHT
 config ZMK_SPLIT
     default y
 
+config ZMK_POINTING
+    default y
+
 endif # SHIELD_PTERO_DACTYL_LEFT || SHIELD_PTERO_DACTYL_RIGHT
+
+if SHIELD_PTERO_DACTYL_RIGHT
+
+config SPI
+    default y
+
+endif
