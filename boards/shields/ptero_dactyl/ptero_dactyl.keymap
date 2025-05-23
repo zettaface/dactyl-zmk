@@ -51,9 +51,9 @@
 &kp ESC    &kp Q      &kp W     &kp E                &kp R            &kp T                           &kp Y            &kp U      &kp I      &kp O      &kp P          &kp LBKT
 &kp TAB    &kp A      &kp S     &kp D                &kp F            &kp G                           &kp H            &kp J      &kp K      &kp L      &kp SEMI       &kp SQT
 &kp LCTRL  &kp Z      &kp X     &kp C                &kp V            &kp B                           &kp N            &kp M      &kp COMMA  &kp DOT    &kp FSLH       &kp RBKT
-                      &kp LGUI  &kp LALT                                                                                &tog GAME  &tog AUTOSHIFTED
-                                &kp LSHIFT &lt LNAVL SPACE  &mo LNAVL                       &lt SYMBL ENTER  &lt NUML ENTER  &mo FUNCL
-                                           &kp LALT         &kp BSPC                        &kp DEL          &mo SYMBL
+                      &kp LGUI  &kp LALT                                                                            
+                                &kp LSHIFT &lt LNAVL SPACE  &mo LNAVL                                 &lt NUML ENTER  &mo FUNCL
+                                           &kp LALT         &kp BSPC                                  &lt SYMBL DEL
             >;
         };
 
@@ -63,9 +63,9 @@
 &trans    AS(Q)      AS(W)     AS(E)      AS(R)      AS(T)                           AS(Y)      AS(U)      AS(I)      AS(O)      AS(P)          AS(LBKT)
 &trans    AS(A)      AS(S)     AS(D)      AS(F)      AS(G)                           AS(H)      AS(J)      AS(K)      AS(L)      AS(SEMI)       AS(SQT)
 &trans    AS(Z)      AS(X)     AS(C)      AS(V)      AS(B)                           AS(N)      AS(M)      AS(COMMA)  AS(DOT)    AS(FSLH)       AS(RBKT)
-                     &trans   &trans                                                                       &trans     &trans
-                              &trans     &trans     &trans                           &trans     &trans     &trans
-                                         &trans     &trans                           &trans     &trans
+                     &trans   &trans                                                                      
+                              &trans     &trans     &trans                           &trans     &trans
+                                         &trans     &trans                           &trans
             >;
         };
 
@@ -75,9 +75,9 @@
 &kp N1     &kp ESC    &kp Q      &kp W     &kp E      &kp R                                 &kp Y            &kp U      &kp I      &kp O      &kp P          &kp LBKT
 &kp N2     &kp LSHIFT &kp A      &kp S     &kp D      &kp F                                 &kp H            &kp J      &kp K      &kp L      &kp SEMI       &kp SQT
 &kp N3     &kp LCTRL  &kp Z      &kp X     &kp C      &kp V                                 &kp N            &kp M      &kp COMMA  &kp DOT    &kp FSLH       &kp RBKT
-                      &kp M      &kp TAB                                                                                &trans     &trans
-                                 &kp B     &kp SPACE  &mo LNAVL                             &lt SYMBL ENTER  &lt NUML ENTER  &mo FUNCL
-                                           &kp LCTRL  &mo NUML                              &kp DEL          &mo NUML
+                      &kp M      &kp TAB                                                                               
+                                 &kp B     &kp SPACE  &mo LNAVL                             &lt SYMBL ENTER  &lt NUML ENTER 
+                                           &kp LCTRL  &mo NUML                              &kp DEL          
             >;
         };
 
@@ -87,9 +87,9 @@
 &bootloader  &trans    &trans    &trans     &trans     &trans                           &trans      &trans      &trans      &trans      &trans      &trans
 &trans       &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans                           &trans      &trans      &trans      &trans      &trans      &trans
 &trans       &kp HOME  &kp PG_DN &kp PG_UP  &kp END    &trans                           &trans      &trans      &trans      &trans      &trans      &trans
-                       &trans    &trans                                                                         &trans      &trans 
-                                 &trans     &trans     &trans                           &trans      &trans      &trans
-                                            &trans     &trans                           &trans      &trans
+                       &trans    &trans                                                                        
+                                 &trans     &trans     &trans                           &trans      &trans      
+                                            &trans     &trans                           &trans      
             >;
         };
 
@@ -99,9 +99,9 @@
 &trans    &kp LBKT  &kp N7      &kp N8        &kp N9       &kp RBKT                           &trans      &trans      &trans      &trans      &trans      &trans
 &trans    &trans    &kp N4      &kp N5        &kp N6       &kp EQUAL                        &trans      &trans      &trans      &trans      &trans      &trans
 &trans    &trans    &kp N1      &kp N2        &kp N3       &kp BACKSLASH                    &trans      &trans      &trans      &trans      &trans      &trans
-                    &kp LANG1   &kp LANG2                                                                           &trans      &trans
-                                &kp MINUS     &kp N0       &kp DOT                          &trans      &trans      &trans
-                                              &kp X        &kp RPAR                         &trans      &trans
+                    &kp LANG1   &kp LANG2                                                                          
+                                &kp MINUS     &kp N0       &kp DOT                          &trans      &trans      
+                                              &kp X        &kp RPAR                         &trans      
             >;
         };
 
@@ -111,9 +111,9 @@
 &trans    &kp LBRC  &kp AMPS   &kp ASTRK    &kp LPAR    &kp RBRC                        &trans      &trans      &trans      &trans      &trans      &bootloader
 &trans    &kp COLON &kp DLLR   &kp PRCNT    &kp CARET   &kp PLUS                        &trans      &trans      &trans      &trans      &trans      &trans
 &trans    &trans    &kp EXCL   &kp AT       &kp POUND   &kp PIPE                        &trans      &trans      &trans      &trans      &trans      &trans
-                    &trans     &trans                                                                           &trans      &trans
-                               &kp UNDERSCORE &kp LBKT  &kp RBKT                        &trans      &trans      &trans 
-                                              &kp LPAR  &kp RPAR                        &trans      &trans
+                    &trans     &trans                                                                         
+                               &kp UNDERSCORE &kp LBKT  &kp RBKT                        &trans      &trans      
+                                              &kp LPAR  &kp RPAR                        &trans      
             >;
         };
 
@@ -123,9 +123,9 @@
 &trans    &trans    &kp F7    &kp F8     &kp F9     &kp F12                          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp LC(PRINTSCREEN)
 &trans    &trans    &kp F4    &kp F5     &kp F6     &kp F11                          &trans        &trans        &trans        &trans        &trans        &kp LC(LS(ESC))
 &trans    &trans    &kp F1    &kp F2     &kp F3     &kp F10                          &bt BT_CLR    &trans        &trans        &trans        &trans        &trans
-                    &trans    &trans                                                                             &trans        &trans
-                              &kp F5     &kp F10    &kp F11                          &trans        &trans        &trans 
-                                         &kp F9     &kp LS(F11)                      &trans        &trans
+                    &trans    &trans                                                                             
+                              &kp F5     &kp F10    &kp F11                          &trans        &trans        
+                                         &kp F9     &kp LS(F11)                      &trans        
             >;
         };
 
@@ -144,9 +144,9 @@
 &trans     &trans     &kp K_PREV &kp K_PP   &kp K_NEXT &kp C_VOL_UP                    &kp K_CALC &kp KP_NUM &kp INS    &kp SLCK   &trans      &kp F12
 &trans     &kp LEFT   &kp UP     &kp DOWN   &kp RIGHT  &kp C_VOL_DN                    &trans     &kp H      &kp J      &kp K      &kp L       &trans
 &trans     &trans     &trans     &trans     &trans     &kp C_MUTE                      &trans     &trans     &trans     &trans     &trans      &trans
-                      &trans     &trans                                                                      &trans     &trans
-                                 &trans     &trans     &trans                          &trans     &trans     &trans
-                                            &trans     &trans                          &trans     &trans
+                      &trans     &trans                                                                     
+                                 &trans     &trans     &trans                          &trans     &trans     
+                                            &trans     &trans                          &trans     
             >;
         };
    };
