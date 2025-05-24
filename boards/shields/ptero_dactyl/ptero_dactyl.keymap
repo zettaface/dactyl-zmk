@@ -23,24 +23,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-
-        pht: positional_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <400>;
-            quick-tap-ms = <200>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <1>;    // <---[[the W key]]
-        };
-
-        tnl: tap_dance_num_layer {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mo NUML>, <&kt KP_NUMLOCK>;
-        };
-
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -72,7 +54,7 @@
             display-name = "def";
             bindings = <
 &kp ESC    &kp Q      &kp W     &kp E                &kp R            &kp T                           &kp Y            &kp U      &kp I          &kp O      &kp P          &kp LBKT
-&kp TAB    &kp A      &kp S     &hml SHIFT D         &hml LCTRL F     &kp G                           &kp H            &hmr RCTRL J  &hmr SHIFT K   &kp L      &kp SEMI       &kp SQT
+&kp TAB    &kp A      &kp S     &hml LSHFT D         &hml LCTRL F     &kp G                           &kp H            &hmr RCTRL J  &hmr RSHFT K   &kp L      &kp SEMI       &kp SQT
 &kp LCTRL  &kp Z      &kp X     &kp C                &kp V            &kp B                           &kp N            &kp M      &kp COMMA      &kp DOT    &kp FSLH       &kp RBKT
                       &kp LGUI  &kp LALT                                                                            
                                 &kp LSHIFT &lt LNAVL SPACE  &mo LNAVL                                 &lt NUML ENTER  &mo FUNCL
