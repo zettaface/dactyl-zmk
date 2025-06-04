@@ -53,13 +53,13 @@
         ruen_to_en: ruen_to_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LS(N0))>; // хоткей для переключения на английский
+            bindings = <&kp LC(LS(N0))>; // хоткей для переключения на английский
         }; 
 
         ruen_to_ru: ruen_to_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LS(N1))>; // хоткей для переключения на русский
+            bindings = <&kp LC(LS(N1))>; // хоткей для переключения на русский
         };
     };
 
@@ -103,7 +103,7 @@
             display-name = "nav";
             bindings = <
 &bootloader  &trans    &trans    &trans     &trans     &ruen_switch 1                   &trans      &trans      &trans      &trans      &trans      &trans
-&trans       &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &ruen_switch 0                   &trans      &trans      &trans      &trans      &trans      &trans
+&kp LA(TAB)  &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &ruen_switch 0                   &trans      &trans      &trans      &trans      &trans      &trans
 &trans       &kp HOME  &kp PG_DN &kp PG_UP  &kp END    &trans                           &trans      &trans      &trans      &trans      &trans      &trans                                                                      
                                             &trans     &trans                           &trans      &trans      
                                                        &trans                           &trans      
@@ -115,7 +115,7 @@
             bindings = <
 &trans    &kp LBKT  &kp N7      &kp N8        &kp N9       &kp RBKT                         &trans      &trans      &trans      &trans      &trans      &trans
 &trans    &trans    &kp N4      &kp N5        &kp N6       &kp EQUAL                        &trans      &trans      &trans      &trans      &trans      &trans
-&trans    &trans    &kp N1      &kp N2        &kp N3       &kp BACKSLASH                    &trans      &trans      &trans      &trans      &trans      &trans                                                                     
+&trans    &kp GRAVE &kp N1      &kp N2        &kp N3       &kp BACKSLASH                    &trans      &trans      &trans      &trans      &trans      &trans                                                                     
                                               &kp N0       &ruen_key DOT FSLH               &trans      &trans      
                                                            &kp MINUS                        &trans      
             >;
@@ -126,7 +126,7 @@
             bindings = <
 &trans    &kp LBRC  &kp AMPS   &kp ASTRK    &kp LPAR    &kp RBRC                        &trans      &trans      &trans      &trans      &trans      &bootloader
 &trans    &kp COLON &kp DLLR   &kp PRCNT    &kp CARET   &kp PLUS                        &trans      &trans      &trans      &trans      &trans      &trans
-&trans    &trans    &kp EXCL   &kp AT       &kp POUND   &kp PIPE                        &trans      &trans      &trans      &trans      &trans      &trans                                                            
+&trans    &kp TILDE &kp EXCL   &kp AT       &kp POUND   &kp PIPE                        &trans      &trans      &trans      &trans      &trans      &trans                                                            
                                             &kp LPAR    &kp RPAR                        &trans      &trans      
                                                         &kp LS(MINUS)                   &trans      
             >;
