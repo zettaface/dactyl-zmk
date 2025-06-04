@@ -53,13 +53,13 @@
         ruen_to_en: ruen_to_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(N0))>; // хоткей для переключения на английский
+            bindings = <&kp RC(LS(N0))>; // хоткей для переключения на английский
         }; 
 
         ruen_to_ru: ruen_to_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(N1))>; // хоткей для переключения на русский
+            bindings = <&kp RC(LS(N1))>; // хоткей для переключения на русский
         };
     };
 
