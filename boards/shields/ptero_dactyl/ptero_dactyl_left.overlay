@@ -73,7 +73,7 @@
            thus, the sensor would be a `wakeup-source` */
 
         arrows {
-            layers = <0>;
+            layers = <3>;
             bindings = <&kp RIGHT_ARROW>, <&kp LEFT_ARROW>, <&kp UP_ARROW>, <&kp DOWN_ARROW>;
 
             tick = <10>;
