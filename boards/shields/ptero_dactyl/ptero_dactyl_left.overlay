@@ -66,8 +66,6 @@
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
 
-        scroll-layers = <3>;
-
         force-awake;
         /* keep the sensor awake while ZMK activity state is ACTIVE,
            fallback to normal downshift mode after ZMK goes into IDLE / SLEEP mode.
@@ -80,6 +78,18 @@
     device = <&trackball_central>;
 
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+
+    precise {
+        layers = <4>;
+        process-next;
+        input-processors = <&xy_scaler 1 12>;
+    };
+
+    scroll {
+        layers = <3>;
+        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 32>;
+        process-next;
+    };
 };
 
 &trackball_listener {
