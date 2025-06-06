@@ -70,6 +70,17 @@
         /* keep the sensor awake while ZMK activity state is ACTIVE,
            fallback to normal downshift mode after ZMK goes into IDLE / SLEEP mode.
            thus, the sensor would be a `wakeup-source` */
+
+        arrows {
+            layers = <0>;
+            bindings =
+                <&kp RIGHT_ARROW>,
+                <&kp LEFT_ARROW>,
+                <&kp UP_ARROW>,
+                <&kp DOWN_ARROW>;
+
+            tick = <10>;
+        };
     };
 };
 
@@ -91,19 +102,6 @@
         process-next;
     };
 };
-
-&trackball_central {
-    arrows {
-        layers = <0>;
-        bindings =
-            <&kp RIGHT_ARROW>,
-            <&kp LEFT_ARROW>,
-            <&kp UP_ARROW>,
-            <&kp DOWN_ARROW>;
-
-        tick = <10>;
-    };
-}
 
 &trackball_listener {
     status = "okay";
