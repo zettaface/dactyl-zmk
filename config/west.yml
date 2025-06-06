@@ -6,8 +6,8 @@ manifest:
       url-base: https://github.com/badjeff
     - name: jewtvet
       url-base: https://github.com/jewtvet
-    - name: kumamuk-git
-      url-base: https://github.com/kumamuk-git
+    - name: kot149
+      url-base: https://github.com/kot149
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -16,7 +16,7 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: kumamuk-git
+      remote: kot149
       revision: main
     - name: zmk-ruen
       remote: jewtvet
