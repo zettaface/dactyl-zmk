@@ -81,7 +81,7 @@
     device = <&trackball>;
 
     // Optional
-    input-processors = <&zip_temp_layer 1 2000>;
+    //input-processors = <&zip_temp_layer 1 2000>;
 
     precise {
         layers = <4>;
