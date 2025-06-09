@@ -77,15 +77,15 @@
     };
 };
 
+#include <input/processors/report_rate_limit.dtsi>
+
 &trackball_split {
     device = <&trackball>;
 
-    // Optional
-    //input-processors = <&zip_temp_layer 1 2000>;
+    input-processors = <&zip_report_rate_limit 16>;
 
     precise {
-        layers = <4>;
-        process-next;
+        layers = <1>;
         input-processors = <&zip_xy_scaler 1 12>;
     };
 };

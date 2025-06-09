@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/badjeff
     - name: jewtvet
       url-base: https://github.com/jewtvet
+    - name: te9no
+      url-base: https://github.com/te9no
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -18,6 +20,12 @@ manifest:
       revision: main
     - name: zmk-ruen
       remote: jewtvet
+      revision: main
+    - name: zmk-input-processor-keybind
+      remote: te9no
+      revision: main
+    - name: zmk-input-processor-report-rate-limit
+      remote: badjeff
       revision: main
   self:
     path: config
