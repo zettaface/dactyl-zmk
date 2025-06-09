@@ -84,8 +84,8 @@
 
     input-processors = <&zip_report_rate_limit 16>;
 
-    precise {
-        layers = <1>;
-        input-processors = <&zip_xy_scaler 1 12>;
-    };
+    // precise {
+    //     layers = <1>;
+    //     input-processors = <&zip_xy_scaler 1 12>;
+    // };
 };
