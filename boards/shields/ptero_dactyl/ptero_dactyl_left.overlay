@@ -73,7 +73,7 @@
     };
 };
 
-#include <input/processors/keybind.dtsi>
+#include <input/processors/zmk-input-processor-keybind.dtsi>
 
 &trackball_central_listener {
     status = "okay";
