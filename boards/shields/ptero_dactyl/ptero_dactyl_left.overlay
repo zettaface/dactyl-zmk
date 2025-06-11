@@ -80,7 +80,6 @@
     zip_keybind_arrows: zip_keybind_arrows {
         compatible = "zmk,input-processor-keybind";
         #input-processor-cells = <0>;
-        type = <INPUT_EV_REL>;
         bindings = <&kp LEFT>,
                   <&kp RIGHT>,
                   <&kp DOWN>,
@@ -95,7 +94,6 @@
     zip_keybind_arrows_8w: zip_keybind_arrows_8w {
         compatible = "zmk,input-processor-keybind";
         #input-processor-cells = <0>;
-        type = <INPUT_EV_REL>;
         bindings = <&kp LEFT>,
                   <&kp RIGHT>,
                   <&kp DOWN>,
