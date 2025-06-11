@@ -73,6 +73,9 @@
     };
 };
 
+#include <input/processors/zmk-input-processor-keybind.dtsi>
+#include <input/processors/sensor_rotation.dtsi>
+
 / {
     zip_keybind_arrows: zip_keybind_arrows {
         compatible = "zmk,input-processor-keybind";
