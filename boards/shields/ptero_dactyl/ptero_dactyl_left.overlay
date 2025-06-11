@@ -91,7 +91,7 @@
         tap-ms = <10>;
     };
 
-    sensor_rotation: sensor_rotation {
+    peripheral_sensor_rotation: peripheral_sensor_rotation {
         compatible = "zmk,input-processor-sensor-rotation";
         #input-processor-cells = <0>;
         rotation-angle = <18>;
@@ -121,6 +121,6 @@
 
     precise {
         layers = <2>;
-        input-processors = <&sensor_rotation>, <&zip_xy_scaler 1 8>;
+        input-processors = <&peripheral_sensor_rotation>, <&zip_xy_scaler 1 8>;
     };
 };
