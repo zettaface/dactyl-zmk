@@ -95,13 +95,21 @@
     central_sensor_rotation: central_sensor_rotation {
         compatible = "zmk,input-processor-sensor-rotation";
         #input-processor-cells = <0>;
-        rotation-angle = <342>;
+        rotation-angle = <18>;
     };
 
     peripheral_sensor_rotation: peripheral_sensor_rotation {
         compatible = "zmk,input-processor-sensor-rotation";
         #input-processor-cells = <0>;
         rotation-angle = <18>;
+    };
+
+    disable_axis: disable_axis {
+        compatible = "zmk,input-processor-transform";
+        #input-processor-cells = <1>;
+        type = <INPUT_EV_REL>;
+        x-codes = <INPUT_REL_MISC>;
+        y-codes = <INPUT_REL_MISC>;
     };
 };
 
@@ -119,7 +127,7 @@
 
     arrows {
         layers = <4>;
-        input-processors = <&central_sensor_rotation>, <&zip_keybind_arrows>;
+        input-processors = <&central_sensor_rotation>, <&zip_keybind_arrows>, <&disable_axis>;
     };
 };
 
