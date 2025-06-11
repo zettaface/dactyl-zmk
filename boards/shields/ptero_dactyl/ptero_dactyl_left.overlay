@@ -95,7 +95,7 @@
     central_sensor_rotation: central_sensor_rotation {
         compatible = "zmk,input-processor-sensor-rotation";
         #input-processor-cells = <0>;
-        rotation-angle = <-18>;
+        rotation-angle = <342>;
     };
 
     peripheral_sensor_rotation: peripheral_sensor_rotation {
