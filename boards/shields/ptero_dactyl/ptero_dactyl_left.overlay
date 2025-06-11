@@ -127,6 +127,7 @@
     arrows {
         layers = <4>;
         input-processors = <&central_sensor_rotation>, <&zip_keybind_arrows>, <&disable_axis>;
+        process-next;
     };
 };
 
