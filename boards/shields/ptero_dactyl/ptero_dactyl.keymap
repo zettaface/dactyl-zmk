@@ -9,7 +9,7 @@
 
 #define DEFAULT 0
 #define MOUSE   1
-#define GAME    2
+#define PMOUSE  2
 #define LNAVL   3
 #define NUML    4
 #define SYMBL   5
@@ -78,25 +78,25 @@
             >;
         };
 
-        as_layer {
+        mouse_layer {
             display-name = "mouse";
             bindings = <
-&trans       &trans    &trans    &mkp MB5   &mkp MB4   &trans                           &trans      &mkp MB4    &mkp MB5    &trans      &trans      &trans
-&trans       &trans    &mkp RCLK &mkp MCLK  &mkp LCLK  &trans                           &trans      &mkp LCLK   &mkp MCLK   &mkp RCLK   &trans      &trans
+&trans       &trans    &trans    &mkp MB5   &mkp MB4   &trans                           &trans      &trans      &trans      &trans      &trans      &trans
+&trans       &trans    &mkp RCLK &mkp MCLK  &mkp LCLK  &trans                           &trans      &trans      &trans      &trans      &trans      &trans
 &trans       &trans    &trans    &trans     &trans     &trans                           &trans      &trans      &trans      &trans      &trans      &trans                                                                      
                                             &trans     &trans                           &trans      &trans      
-                                                       &trans                           &trans      
+                                                       &mo PMOUSE                       &trans      
             >;
         };
 
-        game_layer {
-            display-name = "game";
+        precise_mouse_layer {
+            display-name = "pmouse";
             bindings = <
-&kp N1     &kp ESC    &kp Q      &kp W     &kp E      &kp R                                 &kp Y            &kp U      &kp I      &kp O      &kp P          &kp LBKT
-&kp N2     &kp LSHIFT &kp A      &kp S     &kp D      &kp F                                 &kp H            &kp J      &kp K      &kp L      &kp SEMI       &kp SQT
-&kp N3     &kp LCTRL  &kp Z      &kp X     &kp C      &kp V                                 &kp N            &kp M      &kp COMMA  &kp DOT    &kp FSLH       &kp RBKT                                                                            
-                                           &kp SPACE  &mo LNAVL                             &lt SYMBL ENTER  &lt NUML ENTER 
-                                                      &mo NUML                              &kp DEL          
+&trans       &trans    &trans    &mkp MB5   &mkp MB4   &trans                           &trans      &trans      &trans      &trans      &trans      &trans
+&trans       &trans    &mkp RCLK &mkp MCLK  &mkp LCLK  &trans                           &trans      &trans      &trans      &trans      &trans      &trans
+&trans       &trans    &trans    &trans     &trans     &trans                           &trans      &trans      &trans      &trans      &trans      &trans                                                                      
+                                            &trans     &trans                           &trans      &trans      
+                                                       &trans                           &trans      
             >;
         };
 

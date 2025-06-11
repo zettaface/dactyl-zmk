@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/jewtvet
     - name: zettaface
       url-base: https://github.com/zettaface
+    - name: hsgw
+      url-base: https://github.com/hsgw
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -26,6 +28,9 @@ manifest:
       revision: main
     - name: zmk-input-processor-report-rate-limit
       remote: badjeff
+      revision: main
+    - name: zmk-feature-sensor_rotation
+      remote: hsgw
       revision: main
   self:
     path: config
