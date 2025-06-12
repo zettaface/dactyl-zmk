@@ -134,13 +134,11 @@
     arrows4 {
         layers = <4>;
         input-processors = <&central_sensor_rotation>, <&zip_keybind_arrows>;
-        process-next;
     };
 
     arrows8 {
         layers = <6>;
         input-processors = <&central_sensor_rotation>, <&zip_keybind_arrows_8w>;
-        process-next;
     };
 };
 
