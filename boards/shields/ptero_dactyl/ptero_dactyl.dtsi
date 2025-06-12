@@ -37,6 +37,9 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                   RC(2,11) RC(2,
     };
 };
 
+#include <dt-bindings/zmk/input_transform.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <input/processors.dtsi>
 #include <input/processors/zmk-input-processor-keybind.dtsi>
 #include <input/processors/sensor_rotation.dtsi>
 
