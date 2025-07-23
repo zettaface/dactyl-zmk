@@ -8,8 +8,8 @@
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
 #define DEFAULT 0
-#define MOUSE   1
-#define PMOUSE  2
+#define GAME    1
+#define MOUSE   2
 #define LNAVL   3
 #define NUML    4
 #define SYMBL   5
@@ -78,22 +78,22 @@
             >;
         };
 
-        mouse_layer {
-            display-name = "mouse";
+        game_layer {
+            display-name = "game";
             bindings = <
-&trans       &trans    &trans    &mkp MB5   &mkp MB4   &trans                           &trans      &trans      &trans      &trans      &trans      &trans
-&trans       &trans    &mkp RCLK &mkp MCLK  &mkp LCLK  &trans                           &trans      &trans      &trans      &trans      &trans      &trans
-&trans       &trans    &trans    &trans     &trans     &trans                           &trans      &trans      &trans      &trans      &trans      &trans                                                                      
-                                            &trans     &trans                           &trans      &trans      
-                                                       &mo PMOUSE                       &trans      
+&kp N1     &kp ESC    &kp Q      &kp W     &kp E      &kp R                                 &kp Y            &kp U      &kp I      &kp O      &kp P          &kp LBKT
+&kp N2     &kp LSHIFT &kp A      &kp S     &kp D      &kp F                                 &kp H            &kp J      &kp K      &kp L      &kp SEMI       &kp SQT
+&kp N3     &kp LCTRL  &kp Z      &kp X     &kp C      &kp V                                 &kp N            &kp M      &kp COMMA  &kp DOT    &kp FSLH       &kp RBKT                                                                            
+                                           &kp SPACE  &kp TAB                               &lt SYMBL ENTER  &lt NUML ENTER 
+                                                      &kp LCTRL                             &kp DEL          
             >;
         };
 
-        precise_mouse_layer {
-            display-name = "pmouse";
+        as_layer {
+            display-name = "mouse";
             bindings = <
-&trans       &trans    &trans    &mkp MB5   &mkp MB4   &trans                           &trans      &trans      &trans      &trans      &trans      &trans
-&trans       &trans    &mkp RCLK &mkp MCLK  &mkp LCLK  &trans                           &trans      &trans      &trans      &trans      &trans      &trans
+&trans       &trans    &trans    &mkp MB5   &mkp MB4   &trans                           &trans      &mkp MB4    &mkp MB5    &trans      &trans      &trans
+&trans       &trans    &mkp RCLK &mkp MCLK  &mkp LCLK  &trans                           &trans      &mkp LCLK   &mkp MCLK   &mkp RCLK   &trans      &trans
 &trans       &trans    &trans    &trans     &trans     &trans                           &trans      &trans      &trans      &trans      &trans      &trans                                                                      
                                             &trans     &trans                           &trans      &trans      
                                                        &trans                           &trans      
@@ -114,7 +114,7 @@
         numl {
             display-name = "num";
             bindings = <
-&trans    &kp LBKT  &kp N7      &kp N8        &kp N9       &kp RBKT                         &trans      &trans      &trans      &trans      &trans      &trans
+&trans    &kp LBKT  &kp N7      &kp N8        &kp N9       &kp RBKT                         &tog GAME   &trans      &trans      &trans      &trans      &trans
 &trans    &trans    &kp N4      &kp N5        &kp N6       &kp EQUAL                        &trans      &trans      &trans      &trans      &trans      &trans
 &trans    &kp GRAVE &kp N1      &kp N2        &kp N3       &kp BACKSLASH                    &trans      &trans      &trans      &trans      &trans      &trans                                                                     
                                               &kp N0       &ruen_key DOT FSLH               &trans      &trans      
