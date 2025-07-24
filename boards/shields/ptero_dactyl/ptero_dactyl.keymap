@@ -83,7 +83,7 @@
             bindings = <
 &kp N1     &kp ESC    &kp Q      &kp W     &kp E      &kp R                                 &kp Y            &kp U      &kp I      &kp O      &kp P          &kp LBKT
 &kp N2     &kp LSHIFT &kp A      &kp S     &kp D      &kp F                                 &kp H            &kp J      &kp K      &kp L      &kp SEMI       &kp SQT
-&kp N3     &kp LCTRL  &kp Z      &kp X     &kp C      &kp V                                 &kp N            &kp M      &kp COMMA  &kp DOT    &kp FSLH       &kp RBKT                                                                            
+&kp N3     &kp LCTRL  &kp Z      &kp X     &kp C      &kp B                                 &kp N            &kp M      &kp COMMA  &kp DOT    &kp FSLH       &kp RBKT                                                                            
                                            &kp SPACE  &kp TAB                               &lt NUML ENTER   &mo FUNCL 
                                                       &kp LCTRL                             &lt SYMBL DEL          
             >;
