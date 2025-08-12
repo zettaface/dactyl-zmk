@@ -168,9 +168,16 @@
 
     input-processors = <&peripheral_sensor_rotation>; // , <&zip_temp_layer 2 400>
 
+    game {
+        layers = <1>;
+        input-processors = <&zip_xy_scaler 2 3>;
+        process-next;
+    };
+
     precise {
         layers = <3>;
         input-processors = <&zip_xy_scaler 1 4>;
         process-next;
     };
 };
+
