@@ -108,7 +108,7 @@
             bindings = <
 &trans       &trans    &trans         &mkp MB5   &mkp MB4   &trans                           &trans      &mkp MB4    &mkp MB5    &trans      &trans      &trans
 &trans       &trans    &mkp RCLK      &mkp MCLK  &mkp LCLK  &ch_lang                         &trans      &mkp LCLK   &mkp MCLK   &mkp RCLK   &trans      &trans
-&trans       &trans    &ruen_switch 1 &ruen_switch 0        &trans     &trans                           &trans      &trans      &trans      &trans      &trans      &trans
+&trans       &trans    &ruen_switch 1 &ruen_switch 0        &caps_word     &trans                           &trans      &trans      &trans      &trans      &trans      &trans
                                                             &trans     &trans                           &trans      &trans
                                                                        &trans                           &trans
             >;
