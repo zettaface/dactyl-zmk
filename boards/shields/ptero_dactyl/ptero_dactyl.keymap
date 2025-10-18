@@ -62,6 +62,20 @@
             #binding-cells = <0>;
             bindings = <&kp LA(LS(N1))>; // хоткей для переключения на русский
         };
+
+        ch_lang: ch_lang {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp LSHFT>
+                , <&macro_release &kp LALT>
+                ;
+        };
+    };
+
+    &caps_word {
+        continue-list = <UNDERSCORE MINUS>;
     };
 
     keymap {
@@ -85,18 +99,18 @@
 &kp N2     &kp LSHIFT &kp A      &kp S     &kp D      &kp F                                 &kp H            &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp SEMI       &kp SQT
 &kp N3     &kp LCTRL  &kp Z      &kp X     &kp C      &kp B                                 &kp N            &kp M      &kp COMMA  &kp DOT    &kp FSLH       &kp RBKT                                                                            
                                            &kp SPACE  &kp TAB                               &lt NUML ENTER   &mo FUNCL 
-                                                      &kp LCTRL                             &lt SYMBL DEL          
+                                                      &kp LALT                             &lt SYMBL DEL          
             >;
         };
 
         as_layer {
             display-name = "mouse";
             bindings = <
-&trans       &trans    &trans    &mkp MB5   &mkp MB4   &trans                           &trans      &mkp MB4    &mkp MB5    &trans      &trans      &trans
-&trans       &trans    &mkp RCLK &mkp MCLK  &mkp LCLK  &trans                           &trans      &mkp LCLK   &mkp MCLK   &mkp RCLK   &trans      &trans
-&trans       &trans    &trans    &trans     &trans     &trans                           &trans      &trans      &trans      &trans      &trans      &trans                                                                      
-                                            &trans     &trans                           &trans      &trans      
-                                                       &trans                           &trans      
+&trans       &trans    &trans         &mkp MB5   &mkp MB4   &trans                           &trans      &mkp MB4    &mkp MB5    &trans      &trans      &trans
+&trans       &trans    &mkp RCLK      &mkp MCLK  &mkp LCLK  &ch_lang                         &trans      &mkp LCLK   &mkp MCLK   &mkp RCLK   &trans      &trans
+&trans       &trans    &ruen_switch 1 &ruen_switch 0        &trans     &trans                           &trans      &trans      &trans      &trans      &trans      &trans                                                                      
+                                                            &trans     &trans                           &trans      &trans      
+                                                                       &trans                           &trans      
             >;
         };
 
