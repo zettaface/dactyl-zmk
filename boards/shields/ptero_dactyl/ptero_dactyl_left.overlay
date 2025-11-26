@@ -66,7 +66,7 @@
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
 
-        force-awake;
+        // force-awake;
         /* keep the sensor awake while ZMK activity state is ACTIVE,
            fallback to normal downshift mode after ZMK goes into IDLE / SLEEP mode.
            thus, the sensor would be a `wakeup-source` */
@@ -139,7 +139,7 @@
     status = "okay";
     device = <&trackball_central>;
 
-    input-processors = <&central_sensor_rotation>, <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 16>, <&zip_xy_to_scroll_mapper>;
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 16>, <&zip_xy_to_scroll_mapper>;
 
     precise {
         layers = <5>;
@@ -166,7 +166,7 @@
 &trackball_listener {
     status = "okay";
 
-    input-processors = <&peripheral_sensor_rotation>; // , <&zip_temp_layer 2 400>
+    // input-processors = <&peripheral_sensor_rotation>; // , <&zip_temp_layer 2 400>
 
     game {
         layers = <1>;
