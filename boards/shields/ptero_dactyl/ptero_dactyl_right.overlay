@@ -6,6 +6,7 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <input/processors.dtsi>
+#include <input/processors/axis_clamper.dtsi>
 
 &default_transform {
     col-offset = <6>;
