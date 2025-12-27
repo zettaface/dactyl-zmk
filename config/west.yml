@@ -35,7 +35,7 @@ manifest:
       remote: hsgw
       revision: main
     - name: zmk-axis-clamper
-      remote: efogdev
+      remote: zettaface
       revision: main
   self:
     path: config
