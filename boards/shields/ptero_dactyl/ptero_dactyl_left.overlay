@@ -71,6 +71,7 @@
         y-input-code = <INPUT_REL_Y>;
 
         x-invert;
+        y-invert;
 
 		force-awake;
 		// force-high-performance;
