@@ -68,7 +68,7 @@
         zephyr,axis-y = <INPUT_REL_X>;
 
         smart-mode;
-        invert-y;
+        // invert-y;
 
         // force-awake;
         /* keep the sensor awake while ZMK activity state is ACTIVE,
@@ -143,7 +143,7 @@
     status = "okay";
     device = <&trackball_central>;
 
-    input-processors = <&central_sensor_rotation>, <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>, <&zip_axis_clamper>, <&zip_xy_scaler 1 16>, <&zip_xy_to_scroll_mapper>;
+    input-processors = <&central_sensor_rotation>, <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_axis_clamper>, <&zip_xy_to_scroll_mapper>;
 
     precise {
         layers = <5>;
