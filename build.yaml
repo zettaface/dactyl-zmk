@@ -18,11 +18,11 @@
 #
 ---
 include:
-  - board: nice_nano@2.0.0
+  - board: nice_nano_v2
     shield: ptero_dactyl_left
-    snippet: cdc-acm-console
-  - board: nice_nano@2.0.0
+    # snippet: cdc-acm-console
+  - board: nice_nano_v2
     shield: ptero_dactyl_right
-    snippet: cdc-acm-console
-  - board: nice_nano@2.0.0
+    # snippet: cdc-acm-console
+  - board: nice_nano_v2
     shield: settings_reset
